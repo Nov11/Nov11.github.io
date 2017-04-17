@@ -45,6 +45,11 @@ the exception-declaration.
  lvalue. [Note: This two-stage overload resolution must be performed regardless of whether copy elision will
  occur. It determines the constructor to be called if elision is not performed, and the selected constructor
  must be accessible even if the call is elided. — end note]
+ 
+***
+#### Another Ref
+[GoingNative 2013 Don’t Help the Compiler](https://channel9.msdn.com/Events/GoingNative/2013/Don-t-Help-the-Compiler)
+![]({{ site.url }}/assets/pics/2017-04-17/goingnative.PNG)
 
 *** 
 #### When to use std::move in return statement?
