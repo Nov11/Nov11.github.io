@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Compile MySQL C++ connector 1.1.8 on VS 2015 & Win10"
-date:   2017-04-17 15:31 +0800
+date:   2017-04-24 17:00 +0800
 categories: jekyll update
 ---
 #### Compile MySQL C++ connector 1.1.8 on VS 2015 & Win10
@@ -21,13 +21,13 @@ Default version that code repo contains is 2.0, which works with MySQL 5.7 and a
 Use this : ```cmake -G "Visual Studio 14 2015 Win64"    -DMYSQLCLIENT_STATIC_LINKING=yes ..``` to generate solution file.
 Here is a static library. But before that, some modifications must be made. 
 Add these in CMakeLists.txt. Do alter the paths.  
-```angular2html
+```CMake
 SET(BOOST_ROOT "f:/boost_1_64_0")
 SET(MYSQL_DIR "F:/mysql-5.6.26-winx64")
 SET(MYSQL_VERSION "5.6.26")
 ```
 MYSQL_VERSION cannot be inferred from try_run block in FindMySQL.cmake. I added some message statement around this block:  
-```
+```CMake
 if(MYSQL_INCLUDE_DIR)
   message("!!!!!!!!!!!!!!!!!!MYSQL_INCLUDE_DIR   ${MYSQL_INCLUDE_DIR}")
 endif()

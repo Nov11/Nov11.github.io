@@ -21,3 +21,4 @@ github_username: Nov11
 # Build settings
 markdown: kramdown
 encoding: utf-8
+highlighter: rouge

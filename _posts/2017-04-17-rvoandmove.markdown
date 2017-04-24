@@ -82,7 +82,7 @@ Links related to this topic that I found useful:
 If some experiments is needed, this code may be useful.
 [get the code]({{ site.url }}/assets/code/2017-04-17/a.cpp)  
 functions:
-```$xslt
+```C++
 X foo() {
 	X tmp;
 	return tmp;
@@ -117,7 +117,8 @@ X foo8(X&& param) {
 }
 ```
 test by:
-```$xslt
+```C++
+
 {	std::cout << "new test" << std::endl;
 	X ret = foo();
 	}
@@ -151,6 +152,7 @@ test by:
 		std::cout << "new test8" << std::endl;
 		X ret4 = foo8(std::move(param));
 	}
+	
 ```
 
 elide-constructors:  
