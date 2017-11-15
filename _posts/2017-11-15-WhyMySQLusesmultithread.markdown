@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Why MySQL uses threads to handle request?"
+title:  "Why MySQL uses threads to handle requests?"
 date:   2017-11-15 17:47:41 +0800
 categories: jekyll update
 ---
