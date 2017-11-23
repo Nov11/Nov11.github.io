@@ -6,7 +6,10 @@ categories: jekyll update
 ---
 
 I'm talking about using systemd on Ubuntu 17.10. 
-* write a config file in directory ```/usr/lib/systemd/system```. It's ok to create the last level directory. e.g.
+* write a config file in directory ```/usr/lib/systemd/system```. It's ok to create the last level directory. 
+e.g.     
+
+
 ```
 [Unit]
 Description=license_server
@@ -25,6 +28,6 @@ WantedBy=graphical.target
 to check all config units :```systemctl list-units```
 to see logs : ```systemctl status the_service_name```
 
-It appears that if a console application is what you want to run, use simple as type, not forking.
-I found the explanation is not some how not what is means, well?
-As I'm using this on desktop, I choose graphical.target. Pick target according to your need.
+It appears that if a console application is what you want to run, use simple as type, not forking.  
+I found the explanation is not some how not what is means, well?  
+As I'm using this on desktop, I choose graphical.target. Pick target according to your need.  
