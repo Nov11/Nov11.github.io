@@ -31,3 +31,5 @@ to see logs : ```systemctl status the_service_name```
 It appears that if a console application is what you want to run, use simple as type, not forking.  
 I found the explanation is not some how not what is means, well?  
 As I'm using this on desktop, I choose graphical.target. Pick target according to your need.  
+
+In case you wanna use a python script but encounter 'no ... module', check os.sys.path and use a export PYTHONPATH='missing one' before the script. This is useful if python script is install by pip.
