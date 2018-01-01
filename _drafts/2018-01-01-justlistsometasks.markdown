@@ -4,7 +4,7 @@ title:  "It feels bad when I cannot solve the problem I solved three years ago. 
 date:   2018-01-01 12:55:00 +0800
 categories: jekyll update
 ---
-I guess I can find an ideal job recently.
+I guess I cannot find an ideal job recently.
 
 some task to be finished in this year:
 * 15-445
