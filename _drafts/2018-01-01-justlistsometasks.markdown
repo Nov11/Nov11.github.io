@@ -7,7 +7,7 @@ categories: jekyll update
 I guess I cannot find an ideal job recently.
 
 some task to be finished in this year:
-* 15-445
+* 15-445(done on 1-27 on passing all tests)
 * 6.824
 * more leetcode points & what about 2000 rank?
 * more courser courses
