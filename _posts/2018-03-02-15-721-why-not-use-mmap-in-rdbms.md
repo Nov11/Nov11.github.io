@@ -19,7 +19,7 @@ But there are also disadvantages:
     4. Windows is unable to truncate a memory-mapped file. Hence, on Windows, if an operation such as VACUUM or auto_vacuum tries to reduce the size of a memory-mapped database file, the size reduction attempt will silently fail, leaving unused space at the end of the database file. No data is lost due to this problem, and the unused space will be reused again the next time the database grows. However if a version of SQLite prior to 3.7.0 runs PRAGMA integrity_check on such a database, it will (incorrectly) report database corruption due to the unused space at the end. Or if a version of SQLite prior to 3.7.0 writes to the database while it still has unused space at the end, it may make that unused space inaccessible and unavailable for reuse until after the next VACUUM.
  
 来自 <https://sqlite.org/mmap.html> 
-Write in position after the end of file behaves differently among different linux kernel version.
-DBMS wants to make sure some data is flushed out for sure before it can take further steps. e.g. write ahead logging.
-OS does the page-fault routine may stall DB threads. 
- 
+Write in position after the end of file behaves differently among different linux kernel versions.
+DBMS wants to make sure certain data is flushed out for sure before it can take further steps. e.g. write ahead logging.
+OS running the page-fault routine or background writing-out may stall DB threads. 
+```
