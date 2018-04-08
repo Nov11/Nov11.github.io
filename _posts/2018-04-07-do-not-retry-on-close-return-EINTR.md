@@ -13,7 +13,7 @@ Use close$NOCANCEL on Mac OS if needed.
 * man page
 [man page](http://man7.org/linux/man-pages/man2/close.2.html)
 * what close interface should be 
-[behavior](shttp://austingroupbugs.net/view.php?id=529)
+[behavior](http://austingroupbugs.net/view.php?id=529)
 * full explaination:
 [EINTER and thread cancellation](https://github.com/wahern/cqueues/issues/56)
 
