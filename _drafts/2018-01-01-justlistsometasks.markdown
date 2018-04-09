@@ -21,6 +21,7 @@ some task to be finished in this year:
 * linux timer
 * PUB/SUB system
 * mysql sharding middle ware
+* memory pool
 
 
 get a decent job and no more horrible job interview.
