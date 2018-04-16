@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "19 Parallel Hash Join Algorithms "
+title:  "deal with hotspot login popup on Ubuntu 17.10 "
 date:   2018-04-12 23:32:59 +0800
 categories: jekyll update
 ---
