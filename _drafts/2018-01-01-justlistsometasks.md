@@ -22,11 +22,11 @@ some task to be finished in this year:
 * PUB/SUB system
 * mysql sharding middle ware
 * memory pool
+* DHT implementation
 
-
-get a decent job and no more horrible job interview.
-I can hardly learn any new things in interview any more.
-let me just put them here. Just is a dairy.
+get a decent job and no more horrible job interviews.
+I can hardly learn any new things in interviews any more.
+let me just put them here. Just as a dairy.
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
