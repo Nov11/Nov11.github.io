@@ -6,13 +6,13 @@ categories: jekyll update
 ---
 
 I'm talking about using systemd on Ubuntu 17.10. 
-* write a config file in directory ```/usr/lib/systemd/system```. It's ok to create the last level directory. 
+* write a config file named with '.service' postfix in directory ```/usr/lib/systemd/system```. It's ok to create the last level directory.
 e.g.     
 
 
 ```
 [Unit]
-Description=license_server
+Description=XXXXXXXX
 
 [Service]
 Type=simple
