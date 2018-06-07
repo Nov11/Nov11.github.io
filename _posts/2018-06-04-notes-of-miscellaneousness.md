@@ -19,6 +19,12 @@ categories: jekyll update
     * wanna write to something: List<? super T>
     * wanna read from it : List<? extends T>
     * wanna exactly something : List<T>
+4. thenApply, thenAccept, thenCompose
+    * thenApply get previous result and make one result, passing down the chain
+    * thenAccpet get previous result and consume it. return nothing
+    * thenCompose is like flatmap, returns the completablefuture the parameter function returns 
+   and also consumes previous stage's output
+5. IntStream. when use its output as int, use boxed
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
