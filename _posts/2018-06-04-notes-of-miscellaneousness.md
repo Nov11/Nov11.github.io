@@ -22,12 +22,12 @@ categories: jekyll update
 4. completablefuture will be run in the thread call complete on the first stage
     if the completablefuture is created by new and chained with lots of later stages, the thread in which
     complete is call on the first stage will execute all the stages of the chain.
-4. thenApply, thenAccept, thenCompose
+5. thenApply, thenAccept, thenCompose
     * thenApply get previous result and make one result, passing down the chain
     * thenAccpet get previous result and consume it. return nothing
     * thenCompose is like flatmap, returns the completablefuture the parameter function returns 
    and also consumes previous stage's output
-5. IntStream. when use its output as int, use boxed
+6. IntStream. when use its output as int, use boxed
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
