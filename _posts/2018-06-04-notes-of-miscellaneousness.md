@@ -19,6 +19,9 @@ categories: jekyll update
     * wanna write to something: List<? super T>
     * wanna read from it : List<? extends T>
     * wanna exactly something : List<T>
+4. completablefuture will be run in the thread call complete on the first stage
+    if the completablefuture is created by new and chained with lots of later stages, the thread in which
+    complete is call on the first stage will execute all the stages of the chain.
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
