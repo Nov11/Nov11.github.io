@@ -31,8 +31,8 @@ categories: jekyll update
 7. During bean creation state, if you're using function annotated with @Bean, Spring creates each object if the function name is different. In another word, if you got two function with the same name, one object will be created but the other one will not. This may lead to obfuscating error message cause the bean creation method sits here sound and tight, but you are kept informing no such bean found.
 8. thrift maven plugin may not support '-r' option. It comes to you when include a file not ending with '.thrift'. 
 9. 'find' command with '+' will use all the input as one parameter.
-10. Sadly, if the thrift files doesn't properly contains a package name, compile will fail anyway. maven cannot find classes that do not have a package statement in them. Set up package names if you're dealing with cross platform thrift practice.
-   
+10. Sadly, if the thrift files doesn't properly contains a package name, compilation will fail anyway. maven cannot find classes that do not have a package statement in them. Set up package names if you're dealing with cross platform thrift practice.
+11. interruptedexception. Deal with it : 1)rethrow, or 2)Thread.currentThread().interrupt(). 
    
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
