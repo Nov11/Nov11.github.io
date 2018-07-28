@@ -27,6 +27,9 @@ some task to be finished in this year:
 get a decent job and no more horrible job interviews.
 I can hardly learn any new things in interviews any more.
 let me just put them here. Just as a dairy.
+ 
+ but when it comes to what's going on, the fact is I don't want do anything.
+ deadman walking
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
