@@ -33,6 +33,7 @@ categories: jekyll update
 9. 'find' command with '+' will use all the input as one parameter.
 10. Sadly, if the thrift files doesn't properly contains a package name, compilation will fail anyway. maven cannot find classes that do not have a package statement in them. Set up package names if you're dealing with cross platform thrift practice.
 11. interruptedexception. Deal with it : 1)rethrow, or 2)Thread.currentThread().interrupt(). 
+12. thrift does not output null value in json by default. if that's what you need, you need a new protocal class and customized write method for a target schema. it's clumsy anyway.
    
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
