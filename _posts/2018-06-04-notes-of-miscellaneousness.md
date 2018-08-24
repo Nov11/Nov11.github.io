@@ -35,6 +35,21 @@ categories: jekyll update
 11. interruptedexception. Deal with it : 1)rethrow, or 2)Thread.currentThread().interrupt(). 
 12. thrift does not output null value in json by default. if that's what you need, you need a new protocal class and customized write method for a target schema. it's clumsy anyway.
 13. thrift protocol could be modified to implement a feature that ommit some field names in the structure. field ids can be used as path to that field and current path can be checked before writing struct.
+---------------------------------------
+1. delete backward with reverse_iterator in a for loop. 
+   ```c++
+   set<int> s;
+   // some initalization
+   for(auto riter = s.rbegin(); riter != s.rend();){
+      s.erase(--riter.base());
+   }
+   or
+   for(auto riter = s.rbegin(); riter != s.rend();){
+      riter = decltype(riter){s.erase(std::next(riter).base());
+      // or riter = decltype(riter){s.erase((++riter).base())};
+   }
+   ```
+   
    
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
