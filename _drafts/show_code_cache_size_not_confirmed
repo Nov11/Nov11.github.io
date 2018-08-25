@@ -1,3 +1,7 @@
+1.最稳定的情况可以通过-Xcomp 启动，每个用到的方法都会被编译成本地字节码。稳定运行后可以看看code cache size和JIT compile数目，作为上线。如果这样还有启动后HTTP500，那得再定位其他问题。
+2.通过下面那个程序从稳定运行的线上机器读取的code cache 大小，可作为目标。
+
+
 import java.io.File;
 
 import javax.management.MBeanServerConnection;
