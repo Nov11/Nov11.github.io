@@ -36,6 +36,7 @@ categories: jekyll update
 12. thrift does not output null value in json by default. if that's what you need, you need a new protocal class and customized write method for a target schema. it's clumsy anyway.
 13. thrift protocol could be modified to implement a feature that ommit some field names in the structure. field ids can be used as path to that field and current path can be checked before writing struct.
 14. use ```-XX:-OmitStackTraceInFastThrow``` if you find exceptions like NullPointerException are printed without stack trace.
+15. This is not a solution but a thought. Let's talk about tracing within a single app through thread boundard and deep level of call stack. guess thread local is not always sufficent and for call back like completable future, it's hard to maintain the parent trace within every step of executaion stages. What should I do if I wanna detailed trace of an executaion?
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
