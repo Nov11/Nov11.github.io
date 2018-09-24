@@ -15,9 +15,9 @@ categories: jekyll update
 2. exception hierarchy
     throwable-> exception / error(not checked)
     exception -> runtime exception(not checked) / checked exception
-3. template variable def
-    * wanna write to something: List<? super T>
-    * wanna read from it : List<? extends T>
+3. template variable def(PECS : producer extends, consumer super)
+    * wanna write to something: List<? super T> (the code which is being ritten works as producer)
+    * wanna read from it : List<? extends T> (the code which is being written works as consumer)
     * wanna exactly something : List<T>
 4. completablefuture will be run in the thread call complete on the first stage
     if the completablefuture is created by new and chained with lots of later stages, the thread in which
