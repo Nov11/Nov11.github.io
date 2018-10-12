@@ -8,6 +8,7 @@ VisualVM -> Connect to remote jvm
 
 1.config jvm to support remote jmx connection
 using maven as building tool, so I add these to ‘MAVEN_OPTS’
+'''
 -Dcom.sun.management.jmxremote=true 
 -Dcom.sun.management.jmxremote.port=50001 
 -Dcom.sun.management.jmxremote.ssl=false 
@@ -15,15 +16,19 @@ using maven as building tool, so I add these to ‘MAVEN_OPTS’
 -Djava.rmi.server.hostname=localhost 
 -Dcom.sun.management.jmxremote.authenticate=false 
 -Dcom.sun.management.jmxremote.rmi.port=50002
-
+'''
 These options can be checked with jinfo.
 
+
 2.establish ssh tunnels to server
+'''
 ssh -Nf -L50002:server_name:50002(you will need this. This is actual remote visualvm is talking to.)
 ssh -Nf -L50001:server_name:50001(rmi register)
+'''
+'''
 Local 50001->remote 50001
 Local 50002->remote 50002
-
+'''
 3.connect in visual vm
 add jmx connection without ssl
 
