@@ -12,23 +12,23 @@ It feels painful every time configuring CI using coveralls. Here's some hints wh
 3. Set 'repoToken' in travis as environment variable
 4. Reference repoToken in pom of your project using '${env.repoToken}'
 ```
-            <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
-                <configuration>
-                    <repoToken>${env.repoToken}</repoToken>
-                </configuration>
-                <version>4.3.0</version>
-            </plugin>
+<plugin>
+    <groupId>org.eluder.coveralls</groupId>
+    <artifactId>coveralls-maven-plugin</artifactId>
+    <configuration>
+        <repoToken>${env.repoToken}</repoToken>
+    </configuration>
+    <version>4.3.0</version>
+</plugin>
 ```
 
 5. Add this to your pom if it doesn't have source encoding
+```
+<properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+```
 
-```
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-```
 6. Add this to travis config file
 ```
 after_success:
