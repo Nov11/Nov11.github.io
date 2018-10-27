@@ -39,6 +39,8 @@ categories: jekyll update
 15. This is not a solution but a thought. Let's talk about tracing within a single app through thread boundard and deep level of call stack. guess thread local is not always sufficent and for call back like completable future, it's hard to maintain the parent trace within every step of executaion stages. What should I do if I wanna detailed trace of an executaion?
 16. Invoking get on CompletableFuture with negative timeout will result in timeout exception.
 17. static field and static initialzation block obeys later sees former rule. cannot refer to a static field in static block if the block shows up before the field.
+18. slow rpc calls stalled threads in a pool and new tasks may be rejected. I saw one practical example today.
+19. resouce leak such as hashwheeltimer may eventally cause an out of memory exception and terminate the jvm? not having the hard evidence, but this seems to be reasonable.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
