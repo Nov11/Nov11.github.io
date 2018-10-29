@@ -41,6 +41,7 @@ categories: jekyll update
 17. static field and static initialzation block obeys later sees former rule. cannot refer to a static field in static block if the block shows up before the field.
 18. slow rpc calls stalled threads in a pool and new tasks may be rejected. I saw one practical example today.
 19. resouce leak such as hashwheeltimer may eventally cause an out of memory exception and terminate the jvm? not having the hard evidence, but this seems to be reasonable.
+20. lettuce must create different connections to use different codec. Is this real?
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
