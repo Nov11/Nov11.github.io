@@ -42,6 +42,8 @@ categories: jekyll update
 18. slow rpc calls stalled threads in a pool and new tasks may be rejected. I saw one practical example today.
 19. resouce leak such as hashwheeltimer may eventally cause an out of memory exception and terminate the jvm? not having the hard evidence, but this seems to be reasonable.
 20. lettuce must create different connections to use different codec. Is this real?
+21. whenever a socket gets in fin_wait2, it can only receive FIN or it responses incoming packets with a RST.
+22. bom should be used with scope->import. 
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
