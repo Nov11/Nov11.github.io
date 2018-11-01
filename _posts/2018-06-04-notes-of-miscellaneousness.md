@@ -44,6 +44,7 @@ categories: jekyll update
 20. lettuce must create different connections to use different codec. Is this real?
 21. whenever a socket gets in fin_wait2, it can only receive FIN or it responses incoming packets with a RST.
 22. bom should be used with scope->import. 
+23. when creating bean with @Bean in spring configuration, spring use name as key when deciding which is the one to be wired in. duplicate bean method may be a unwelcomed source of frustration.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
