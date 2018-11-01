@@ -45,6 +45,8 @@ categories: jekyll update
 21. whenever a socket gets in fin_wait2, it can only receive FIN or it responses incoming packets with a RST.
 22. bom should be used with scope->import. 
 23. when creating bean with @Bean in spring configuration, spring use name as key when deciding which is the one to be wired in. duplicate bean method may be a unwelcomed source of frustration.
+24. and also, in a large application package & component scan can be & should be organized carefully. forget this if not sub projects there will be that depend on some part of functions the module.
+25. @ComponentScan is not tied with @Component annotation(@Controller/@Service/@Repositery/etc). it can be fed into context registration method. And inside import annotations as value, too.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
