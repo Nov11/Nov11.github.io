@@ -47,6 +47,7 @@ categories: jekyll update
 23. when creating bean with @Bean in spring configuration, spring use name as key when deciding which is the one to be wired in. duplicate bean method may be a unwelcomed source of frustration.
 24. and also, in a large application package & component scan can be & should be organized carefully. forget this if not sub projects there will be that depend on some part of functions the module.
 25. @ComponentScan is not tied with @Component annotation(@Controller/@Service/@Repositery/etc). it can be fed into context registration method. And inside import annotations as value, too.
+26. Jetty will init servlets and then init connectors in the last step. check health handler will never serve a request until all servlet have been ready. It's ok to place it along spring mvc dispatcher.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
