@@ -17,15 +17,16 @@ some task to be finished in this year:
 * gain more experience in rdbms development
 * http server (GET/POST/CGI)
 * REDIS unqlite?
-* TCP RPC framework
+* turn tinyNL to a TCP RPC framework
 * linux timer
 * PUB/SUB system
 * mysql sharding middle ware
 * memory pool
-* DHT implementation
+* a DHT implementation
 * which consumes more memory? 100 string or hash set with 100 value?
-* redis command
-* disruptor
+* add a customized redis command
+* get knowledge of disruptor
+* lsm tree implementation
 
 get a decent job and no more horrible job interviews.
 I can hardly learn any new things in interviews any more.
