@@ -49,6 +49,7 @@ categories: jekyll update
 25. @ComponentScan is not tied with @Component annotation(@Controller/@Service/@Repositery/etc). it can be fed into context registration method. And inside import annotations as value, too.
 26. Jetty will init servlets and then init connectors in the last step. check health handler will never serve a request until all servlet have been ready. It's ok to place it along spring mvc dispatcher.
 27. JedisConnectionException unexpected end of stream/connection reset can be produced by obtain jedis object and hold it longer than redis server's timeout. if read get FIN first, unexpected result shows up. Otherwise connection reset shows up. When it comes to JedisConnectionException broken pipe, I've no idea how to produce it deterministically.
+28. Never fool yourself by start a thread in thread factory of a pool. IllegalArgumentException is really ugly without reasonable information for trouble shotting.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
