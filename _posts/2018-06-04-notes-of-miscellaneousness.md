@@ -51,7 +51,8 @@ categories: jekyll update
 27. JedisConnectionException unexpected end of stream/connection reset can be produced by obtain jedis object and hold it longer than redis server's timeout. if read get FIN first, unexpected result shows up. Otherwise connection reset shows up. When it comes to JedisConnectionException broken pipe, I've no idea how to produce it deterministically.
 28. Never fool yourself by start a thread in thread factory of a pool. IllegalArgumentException is really ugly without reasonable information for trouble shotting.
 29. If a field is to be serialized by thrift, do not set it directly. use setter instead. this could be a time killer. fxxk
-30. lettuce eval command returns long not integer. 
+30. lettuce's eval command returns long not integer. 
+31. It's possible to have two charles certificate installed on one cellphone. Do add https proxied url in charles after certifacate is installed on the phone.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
