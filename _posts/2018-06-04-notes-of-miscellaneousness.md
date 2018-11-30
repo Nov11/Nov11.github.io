@@ -53,6 +53,8 @@ categories: jekyll update
 29. If a field is to be serialized by thrift, do not set it directly. use setter instead. this could be a time killer. fxxk
 30. lettuce's eval command returns long not integer. 
 31. It's possible to have two charles certificate installed on one cellphone. Do add https proxied url in charles after certifacate is installed on the phone.
+32. grafana stats interval may be larger than scale to interval. in that case, scaletosecond will produce average result. but summarize returns data points without averaging them. if data point sampling interval is smaller than scale to / summarize interval, they produce the same resilt. Whenever sampling interval is larger, use scaletosecond.
+33. cut -d number_with_dash get fields numbered start from that column to the end. 
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
