@@ -33,7 +33,8 @@ I can hardly learn any new things in interviews any more.
 let me just put them here. Just as a dairy.
 
 guess it'll be hard to finish reading all the books I bought.
- 
+
+goodbye November. This month is all about disappointment & frustration.
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
