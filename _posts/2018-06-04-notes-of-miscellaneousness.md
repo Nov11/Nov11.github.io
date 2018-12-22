@@ -66,6 +66,7 @@ categories: jekyll update
    ```
 36. I stucked for a while when using gpg to generate key which is required by nexus. Here's what works for me. Use `gpg --full-gen-key` and use 4096 as key size.  Run `gpg2 --list-keys --keyid-format LONG` to get the key ID. And finaly run `gpg2 --keyserver hkp://pool.sks-keyservers.net --send-keys your key ID`. Since Ubuntu 18.04 comes with gpg of version 2, gpg / gpg2 is interchangable to my experience.
 37. eclipse memory analyze tool is a great choice for large heap dump(above 4GB) analyze.
+38. `X11UseLocalhost no` in sshd_config is needed when using X11 forwarding.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
