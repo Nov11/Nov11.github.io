@@ -23,7 +23,7 @@ some task to be finished in this year:
 * mysql sharding middle ware
 * memory pool
 * a DHT implementation
-* which consumes more memory? 100 string or hash set with 100 value?
+* which consumes more memory? 100 string or hash set with 100 value?(I mean in Redis)
 * add a customized redis command
 * get knowledge of disruptor
 * lsm tree implementation
@@ -35,6 +35,10 @@ let me just put them here. Just as a dairy.
 guess it'll be hard to finish reading all the books I bought.
 
 goodbye November. This month is all about disappointment & frustration.
+
+things doesn't change much after. stuck in a heap dump file for a while, sigh. 
+
+I have achieved so little goals that listed above. it sucks. 
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
