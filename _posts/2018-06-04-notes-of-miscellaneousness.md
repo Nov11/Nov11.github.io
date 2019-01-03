@@ -69,6 +69,8 @@ categories: jekyll update
 38. `X11UseLocalhost no` in sshd_config is needed when using X11 forwarding.
 39. string' intern method may help if reusing constant string literal benifits. use with ` -XX:StringTableSize` to a larger value.
 40. -XX:+UseStringDeduplication and -XX:StringDeduplicationAgeThreshold=3 might help if G1 GC is running. threshold defaults to 3.
+41. apache bench mark tool's 'concurrency' means it will create users of that much and issue requests whenever one user gets its response. this is the meaning of the option.
+42. I got kinda of hating G1 GC. Not sure but I'm encountering one Full GC problem slowly occuring after 4 hours of one deployment. Humongous GC might be the root cause.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
