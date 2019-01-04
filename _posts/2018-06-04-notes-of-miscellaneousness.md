@@ -71,6 +71,13 @@ categories: jekyll update
 40. -XX:+UseStringDeduplication and -XX:StringDeduplicationAgeThreshold=3 might help if G1 GC is running. threshold defaults to 3.
 41. apache bench mark tool's 'concurrency' means it will create users of that much and issue requests whenever one user gets its response. this is the meaning of the option.
 42. I got kinda of hating G1 GC. Not sure but I'm encountering one Full GC problem slowly occuring after 4 hours of one deployment. Humongous GC might be the root cause.
+43. `sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys key-string` when you see apt complains that it cannot verify something due to missing this key-string. It's useful. 
+44. if certain modules are loaded into kernel but docker still refuses to run and you're using a server with many routing rules, try this :`ip link add name docker0 type bridge ip addr add dev docker0 172.17.0.1/16`. it will save your from endless cycle of this kind : start docker! failed! start docker! failed!...   also, add `--iptables=false` to systemd config may rescue docker starting as well.
+45. sshd might not read key files correctly because of mal configured locale. f**k
+46. .tmux.conf with `set -g mode-mouse on` enables scrolling with mouse.
+47. large objects the size of which is above 50% of region size might be a cause of Full GC. details not confirmed yet.
+
+
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
