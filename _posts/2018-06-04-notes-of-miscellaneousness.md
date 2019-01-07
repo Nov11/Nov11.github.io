@@ -76,6 +76,8 @@ categories: jekyll update
 45. sshd might not read key files correctly because of mal configured locale. f**k
 46. .tmux.conf with `set -g mode-mouse on` enables scrolling with mouse.
 47. large objects the size of which is above 50% of region size might be a cause of Full GC. details not confirmed yet.
+48. heapbytebuffer uses per thread cache of direct buffers with no number / size limitation. this may lead to continuous growing memory consumption.
+49. options that relate to G1 GC. -XX:-ResizePLAB (said this may reduce CPU usage? not confirmed).-XX:+PerfDisableSharedMem(save jvm from waiting log flushing).
 
 
 ---------------------------------------
