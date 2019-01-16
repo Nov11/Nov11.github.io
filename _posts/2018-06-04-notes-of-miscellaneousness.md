@@ -81,6 +81,7 @@ categories: jekyll update
 50. internal memory showed in NMT is not the same as whole native memory. cause sometimes RES in top grows much larger than the size showed in 'internal memory'.
 51. tried jemalloc but the graph / report do not provide a apparent clue. this is still a myth.
 52. `--privileged` is needed if you wanna use perf inside a docker container.
+53. jetty's queuedthreadpool has a rejection log which logs queueu status on rejection. but it's not that easy to grep since 'rejected' is likely widely used in loggings of one application.
 
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
