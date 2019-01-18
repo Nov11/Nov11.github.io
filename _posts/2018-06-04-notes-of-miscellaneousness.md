@@ -82,6 +82,7 @@ categories: jekyll update
 51. tried jemalloc but the graph / report do not provide a apparent clue. this is still a myth.
 52. `--privileged` is needed if you wanna use perf inside a docker container.
 53. jetty's queuedthreadpool has a rejection log which logs queueu status on rejection. but it's not that easy to grep since 'rejected' is likely widely used in loggings of one application.
+54. after 10+ wait time out during maven repositery deployment, I finally succeed. don't hang on this. whenever running into this, try it later.
 
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
