@@ -83,6 +83,7 @@ categories: jekyll update
 52. `--privileged` is needed if you wanna use perf inside a docker container.
 53. jetty's queuedthreadpool has a rejection log which logs queueu status on rejection. but it's not that easy to grep since 'rejected' is likely widely used in loggings of one application.
 54. after 10+ wait time out during maven repositery deployment, I finally succeed. don't hang on this. whenever running into this, try it later.
+55. aspectj compiler produces hasAspect/aspectOf methods in aspect class. if these methods doesn't show up, NoSuchMethodException awaits in runtime. to ensure this generation, make aspject plugin runs last. commenting out maven-compiler-plugin might be helpful if you're running in a multimodule maven project and maven-compiler-plugin is set in parent pom. the order in the same submodule pom seems to make no difference. and also, this might not be deterministic if you have maven-compiler first and aspecjt second. It works sometime, fails sometime.
 
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
