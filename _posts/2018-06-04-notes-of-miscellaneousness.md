@@ -86,6 +86,7 @@ categories: jekyll update
 55. aspectj compiler produces hasAspect/aspectOf methods in aspect class. if these methods doesn't show up, NoSuchMethodException awaits in runtime. to ensure this generation, make aspject plugin runs last. commenting out maven-compiler-plugin might be helpful if you're running in a multimodule maven project and maven-compiler-plugin is set in parent pom. the order in the same submodule pom seems to make no difference. and also, this might not be deterministic if you have maven-compiler first and aspecjt second. It works sometime, fails sometime.
 56. remove files with only comments inside. these will be treated as stale by maven-compiler-plugin and trig compilation every time, which will not trigger ajc compile. bet you won't like this.
 57. it's not that effective to reduce cpu usage by caching serialized binary of large objects and reusing them. this might performs well when total cpu usage is low. but decrease when overall cpu usage is high, which means many operations other than serialization is being processed by cpu. this caching enhancement can be done by aop the thrift generated write method.
+58. when running grafana & graphite via docker on a server, to set the ip addres of graphite to grafana, get it from docker0 interface by docker network inspect. it's not the same as running the on the local machine, in which case localhost is the right hostname.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
