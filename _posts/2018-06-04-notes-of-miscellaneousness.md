@@ -89,6 +89,18 @@ categories: jekyll update
 58. when running grafana & graphite via docker on a server, to set the ip address of graphite to grafana, get it from docker0 interface by docker network inspect. it's not the same as running the on the local machine, in which case localhost is the right hostname.
 59. `nc -l localhost port ` will establish a server listening on 127.0.0.1. When connections are made from another machine, they won't be able to reach this port. Use `nc -l port` instead and an entry like '0.0.0.0:7890' will show up after calling netstat.
 60. On mac, nc localhost port usually issue an IPV6 connection rather than IPV4. thus nothing shows up in 'nc -lu port'. use `nc -4u localhost port` instead.
+61. when it comes to forwarding udp through ssh tunnel, use socat other than nc with fifo. like this : client side `socat udp4-recvfrom:8125,reuseaddr,fork tcp:localhost:18125`(udp4-listen doesn't work on my machine. not knowing why.), server side `socat tcp4-listen:18125,reuseaddr,fork udp:localhost:8125`. theses will make many connections. certainly not good for the long run. but still better than nc with fifos. this might stash datagram into two tcp packet which  on the server side makes it hard to reconstruct reasonable packets from them.
+    ```
+    #!/bin/bash
+    rm /tmp/ttt
+    mkfifo /tmp/ttt
+    nc -l 18125 < /tmp/ttt |tee /dev/tty |  nc -u localhost 8125 > /tmp/ttt
+    
+    #!/bin/bash
+    rm /tmp/ttt
+    mkfifo /tmp/ttt
+    nc -kl4u localhost 8125 < /tmp/ttt | tee /dev/tty | nc localhost 18125 > /tmp/ttt
+    ```
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
