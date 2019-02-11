@@ -88,6 +88,7 @@ categories: jekyll update
 57. it's not that effective to reduce cpu usage by caching serialized binary of large objects and reusing them. this might performs well when total cpu usage is low. but decrease when overall cpu usage is high, which means many operations other than serialization is being processed by cpu. this caching enhancement can be done by aop the thrift generated write method.
 58. when running grafana & graphite via docker on a server, to set the ip address of graphite to grafana, get it from docker0 interface by docker network inspect. it's not the same as running the on the local machine, in which case localhost is the right hostname.
 59. `nc -l localhost port ` will establish a server listening on 127.0.0.1. When connections are made from another machine, they won't be able to reach this port. Use `nc -l port` instead and an entry like '0.0.0.0:7890' will show up after calling netstat.
+60. On mac, nc localhost port usually issue an IPV6 connection rather than IPV4. thus nothing shows up in 'nc -lu port'. use `nc -4u localhost port` instead.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
