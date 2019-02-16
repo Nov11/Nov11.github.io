@@ -90,6 +90,7 @@ categories: jekyll update
 59. `nc -l localhost port ` will establish a server listening on 127.0.0.1. When connections are made from another machine, they won't be able to reach this port. Use `nc -l port` instead and an entry like '0.0.0.0:7890' will show up after calling netstat.
 60. On mac, nc localhost port usually issue an IPV6 connection rather than IPV4. thus nothing shows up in 'nc -lu port'. use `nc -4u localhost port` instead.
 61. when it comes to forwarding udp through ssh tunnel, use socat other than nc with fifo. like this : client side `socat udp4-recvfrom:8125,reuseaddr,fork tcp:localhost:18125`(udp4-listen doesn't work on my machine. not knowing why.), server side `socat tcp4-listen:18125,reuseaddr,fork udp:localhost:8125`. theses will make many connections. certainly not good for the long run. but still better than nc with fifos. this might stash datagram into two tcp packet which  on the server side makes it hard to reconstruct reasonable packets from them.
+62. setting cache value with a timestamp and then the value can be use as a fall back if the value expired and remote rpc fails. 
     ```
     #!/bin/bash
     rm /tmp/ttt
