@@ -40,6 +40,7 @@ things doesn't change much after. stuck in a heap dump file for a while, sigh.
 
 I have achieved so little goals that listed above. it sucks. 
 
+here comes the fresh new years wishes. hope I'll finish all tasks above before the end of this year. (funny face
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
