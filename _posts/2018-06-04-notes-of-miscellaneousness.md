@@ -102,6 +102,7 @@ categories: jekyll update
     mkfifo /tmp/ttt
     nc -kl4u localhost 8125 < /tmp/ttt | tee /dev/tty | nc localhost 18125 > /tmp/ttt
     ```
+63. actually directbuffer will be freed when not referenced. this is done via a phantom reference field inside the ref object. during cleaning phase, the off heap memory will be freed.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
