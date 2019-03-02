@@ -104,6 +104,7 @@ categories: jekyll update
     ```
 63. actually directbuffer will be freed when not referenced. this is done via a phantom reference field inside the ref object. during cleaning phase, the off heap memory will be freed.
 64. avro does not support backward compatability. 
+65. sonarqube depends on JaCoCo which does not support multi-module maven project directly. A fresh new aggregation module is needed to generate aggregate report of all modules that shoud be counint for coverages and be linted. 'report-aggregate' should be used in that module. And do reference all the deepest modules in the dependency tree in that aggregate module.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
