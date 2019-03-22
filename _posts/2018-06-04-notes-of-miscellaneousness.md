@@ -106,7 +106,7 @@ categories: jekyll update
 64. avro does not support backward compatability. 
 65. sonarqube depends on JaCoCo which does not support multi-module maven project directly. A fresh new aggregation module is needed to generate aggregate report of all modules that shoud be counint for coverages and be linted. 'report-aggregate' should be used in that module. And do reference all the deepest modules in the dependency tree in that aggregate module.
 66. redis `memory usage keyname` command show overall memory consumption of a given key. `debug object keyname` shows some details as well.
-67. 
+67. mongodb use wiredtiger's btree as default storage engine. lsm is configurable when creating a new collection but not in mongodb.conf.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
