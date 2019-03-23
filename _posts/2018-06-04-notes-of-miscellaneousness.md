@@ -107,6 +107,8 @@ categories: jekyll update
 65. sonarqube depends on JaCoCo which does not support multi-module maven project directly. A fresh new aggregation module is needed to generate aggregate report of all modules that shoud be counint for coverages and be linted. 'report-aggregate' should be used in that module. And do reference all the deepest modules in the dependency tree in that aggregate module.
 66. redis `memory usage keyname` command show overall memory consumption of a given key. `debug object keyname` shows some details as well.
 67. mongodb use wiredtiger's btree as default storage engine. lsm is configurable when creating a new collection but not in mongodb.conf.
+68. ping from within a container which connects to bridge network to another host is not gonna work. use host network or use virtual machine. it's might be possible in the future release. but not for now.
+69. running pmm server in a docker and pmm client on another host, collecting metrics are problems cannot be solved for the moment. use virtualbox to run pmm server in ova instead.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
