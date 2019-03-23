@@ -109,6 +109,8 @@ categories: jekyll update
 67. mongodb use wiredtiger's btree as default storage engine. lsm is configurable when creating a new collection but not in mongodb.conf.
 68. ping from within a container which connects to bridge network to another host is not gonna work. use host network or use virtual machine. it's might be possible in the future release. but not for now.
 69. running pmm server in a docker and pmm client on another host, collecting metrics are problems cannot be solved for the moment. use virtualbox to run pmm server in ova instead.
+70. -o GatewayPorts=yes to allow access from docker container other than just localhost
+71. ssh -4 to force ipv4 connection. or else ipv6 might be troublesome.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
