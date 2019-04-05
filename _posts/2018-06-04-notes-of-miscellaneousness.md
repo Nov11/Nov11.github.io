@@ -112,7 +112,7 @@ categories: jekyll update
 70. -o GatewayPorts=yes to allow access from docker container other than just localhost
 71. ssh -4 to force ipv4 connection. or else ipv6 might be troublesome.
 72.  number > /proc/sys/vm/drop_caches.1:clear pagecache, 2:clear directories and inodes, 3:both 1 and 2. test disk write/read throughput with these commands :`dd if=/dev/zero of=diskbench bs=1M count=1024 conv=fdatasync` , `echo 3 | sudo tee /proc/sys/vm/drop_caches` , `dd if=diskbench of=/dev/null bs=1M count=1024` 
-73. AOF might make redis not responding to new coming connections. unbelievable.
+73. AOF might make redis not responding to new coming connections. unbelievable. when a file is been called on fsync, another write call on the same file will block the calling thread. although redis uses a seperate thread doing fsync, and make write into a temp buffer while the thread does not finish. redis call write on the file if the fsync doesn't finish in 2 seconds. I think AOF on a slave which exists in a cluster might be eligible of turned off. In that if a single slave is still alive, the state is perserved.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
