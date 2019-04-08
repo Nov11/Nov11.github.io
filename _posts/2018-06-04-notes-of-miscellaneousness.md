@@ -126,7 +126,8 @@ categories: jekyll update
       // or riter = decltype(riter){s.erase((++riter).base())};
    }
    ```
-   
+-------------------------------------------
+1.rotate log by command `db.adminCommand( { logRotate : 1 } )`
    
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
