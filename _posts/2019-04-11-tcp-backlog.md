@@ -12,10 +12,10 @@ Here's how to reproduce this:
 2. connect to it wit redisson client
 
 below is the screen shot of wireshark:
-[//] # (![pic1]https://raw.githubusercontent.com/Nov11/Nov11.github.io/master/assets/pics/2019-04-11/packet.png))
+![pic1](https://raw.githubusercontent.com/Nov11/Nov11.github.io/master/assets/pics/2019-04-11/packet.png)
 
 this is the exception redisson thrown:
-[//] # (![pic1]https://raw.githubusercontent.com/Nov11/Nov11.github.io/master/assets/pics/2019-04-11/exception.png))
+![pic1](https://raw.githubusercontent.com/Nov11/Nov11.github.io/master/assets/pics/2019-04-11/exception.png)
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
