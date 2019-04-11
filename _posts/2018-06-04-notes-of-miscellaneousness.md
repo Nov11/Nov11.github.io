@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title:  "let's put those pieces back again. mainly about java"
@@ -86,6 +87,35 @@ categories: jekyll update
 55. aspectj compiler produces hasAspect/aspectOf methods in aspect class. if these methods doesn't show up, NoSuchMethodException awaits in runtime. to ensure this generation, make aspject plugin runs last. commenting out maven-compiler-plugin might be helpful if you're running in a multimodule maven project and maven-compiler-plugin is set in parent pom. the order in the same submodule pom seems to make no difference. and also, this might not be deterministic if you have maven-compiler first and aspecjt second. It works sometime, fails sometime.
 56. remove files with only comments inside. these will be treated as stale by maven-compiler-plugin and trig compilation every time, which will not trigger ajc compile. bet you won't like this.
 57. it's not that effective to reduce cpu usage by caching serialized binary of large objects and reusing them. this might performs well when total cpu usage is low. but decrease when overall cpu usage is high, which means many operations other than serialization is being processed by cpu. this caching enhancement can be done by aop the thrift generated write method.
+58. when running grafana & graphite via docker on a server, to set the ip address of graphite to grafana, get it from docker0 interface by docker network inspect. it's not the same as running the on the local machine, in which case localhost is the right hostname.
+59. `nc -l localhost port ` will establish a server listening on 127.0.0.1. When connections are made from another machine, they won't be able to reach this port. Use `nc -l port` instead and an entry like '0.0.0.0:7890' will show up after calling netstat.
+60. On mac, nc localhost port usually issue an IPV6 connection rather than IPV4. thus nothing shows up in 'nc -lu port'. use `nc -4u localhost port` instead.
+61. when it comes to forwarding udp through ssh tunnel, use socat other than nc with fifo. like this : client side `socat udp4-recvfrom:8125,reuseaddr,fork tcp:localhost:18125`(udp4-listen doesn't work on my machine. not knowing why.), server side `socat tcp4-listen:18125,reuseaddr,fork udp:localhost:8125`. theses will make many connections. certainly not good for the long run. but still better than nc with fifos. this might stash datagram into two tcp packet which  on the server side makes it hard to reconstruct reasonable packets from them.
+62. setting cache value with a timestamp and then the value can be use as a fall back if the value expired and remote rpc fails. 
+    ```
+    #!/bin/bash
+    rm /tmp/ttt
+    mkfifo /tmp/ttt
+    nc -l 18125 < /tmp/ttt |tee /dev/tty |  nc -u localhost 8125 > /tmp/ttt
+    
+    #!/bin/bash
+    rm /tmp/ttt
+    mkfifo /tmp/ttt
+    nc -kl4u localhost 8125 < /tmp/ttt | tee /dev/tty | nc localhost 18125 > /tmp/ttt
+    ```
+63. actually directbuffer will be freed when not referenced. this is done via a phantom reference field inside the ref object. during cleaning phase, the off heap memory will be freed.
+64. avro does not support backward compatability. 
+65. sonarqube depends on JaCoCo which does not support multi-module maven project directly. A fresh new aggregation module is needed to generate aggregate report of all modules that shoud be counint for coverages and be linted. 'report-aggregate' should be used in that module. And do reference all the deepest modules in the dependency tree in that aggregate module.
+66. redis `memory usage keyname` command show overall memory consumption of a given key. `debug object keyname` shows some details as well.
+67. mongodb use wiredtiger's btree as default storage engine. lsm is configurable when creating a new collection but not in mongodb.conf.
+68. ping from within a container which connects to bridge network to another host is not gonna work. use host network or use virtual machine. it's might be possible in the future release. but not for now.
+69. running pmm server in a docker and pmm client on another host, collecting metrics are problems cannot be solved for the moment. use virtualbox to run pmm server in ova instead.
+70. -o GatewayPorts=yes to allow access from docker container other than just localhost
+71. ssh -4 to force ipv4 connection. or else ipv6 might be troublesome.
+72.  number > /proc/sys/vm/drop_caches.1:clear pagecache, 2:clear directories and inodes, 3:both 1 and 2. test disk write/read throughput with these commands :`dd if=/dev/zero of=diskbench bs=1M count=1024 conv=fdatasync` , `echo 3 | sudo tee /proc/sys/vm/drop_caches` , `dd if=diskbench of=/dev/null bs=1M count=1024` 
+73. AOF might make redis not responding to new coming connections. unbelievable. when a file is been called on fsync, another write call on the same file will block the calling thread. although redis uses a seperate thread doing fsync, and make write into a temp buffer while the thread does not finish. redis call write on the file if the fsync doesn't finish in 2 seconds. I think AOF on a slave which exists in a cluster might be eligible of turned off. In that if a single slave is still alive, the state is perserved.
+74. do enable rdb if running a master-slave replication. or even if sentinel is active, a flash restart of master without persistence might not be perceved by sentinel. this results in empty master. and the master will erase everything on its slave. if running replication, config master with some sort of persistence to avoid data loss.
+75. if redis is blocking in aof write, tcp connections can still be established provided that backlog is not exceeded, which is unlikely in most cases. but redis works in a request response way, so if it is blocked, it will not be able to answer request. client & sentinels may find their commands timeout or ping / auth command not being answered. in case of auth, one looks like it cannot be auth. in case of sentinel probing, it looks like a network partition occured. I think rdb should be enabled on master node and no AOF should be turned on on any nodes in the cluster.
 ---------------------------------------
 1. delete backward with reverse_iterator in a for loop. 
    ```c++
@@ -100,7 +130,8 @@ categories: jekyll update
       // or riter = decltype(riter){s.erase((++riter).base())};
    }
    ```
-   
+-------------------------------------------
+1.rotate log by command `db.adminCommand( { logRotate : 1 } )`
    
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
