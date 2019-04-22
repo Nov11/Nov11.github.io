@@ -13,6 +13,8 @@ It turns out that installed thrift supports java.
 
 not a very pleasant experience if you have to use this old thrift version.
 
+ant is needed if you plan to use thrift to generate java class.
+
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/

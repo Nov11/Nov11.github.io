@@ -11,7 +11,7 @@ categories: jekyll update
 |/proc/sys/net/ipv4/tcp_max_syn_backlog| max length of the queue contains all incomplete socket system wide|
 
 
-greate resource:
+greate resources:
 * tcp-backlog : http://veithen.io/2014/01/01/how-tcp-backlog-works-in-linux.html but in fact, linux does not send sync/ack back. see my post on tcp-backlog
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
