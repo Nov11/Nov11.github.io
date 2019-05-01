@@ -38,6 +38,11 @@ proc:
 greate resources:
 * hdparam -t(cached:no disk access) and -T(buffered: just disk access) : https://www.unix.com/unix-for-dummies-questions-and-answers/163209-difference-between-buffered-disk-reads-cached-reads.html
 * over commit : https://www.kernel.org/doc/Documentation/vm/overcommit-accounting
+
+
+
+
+
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
