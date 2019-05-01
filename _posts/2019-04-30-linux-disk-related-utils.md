@@ -23,7 +23,7 @@ proc:
 
  /sys/block/sda/queue/read_ahead_kb  : read ahead
 
- /proc/sys/vm/nr_pdflush_threads : number of pdflush thread running
+ /proc/sys/vm/nr_pdflush_threads : number of pdflush thread running(not configurable now https://patchwork.kernel.org/patch/9983043/)
 
  /proc/sys/vm/dirty_expire_centisecs : if data has stayed longer than this, flush it
 
