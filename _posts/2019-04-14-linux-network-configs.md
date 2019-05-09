@@ -13,6 +13,8 @@ categories: jekyll update
 
 greate resources:
 * tcp-backlog : http://veithen.io/2014/01/01/how-tcp-backlog-works-in-linux.html but in fact, linux does not send sync/ack back. see my post on tcp-backlog
+* linux ip configs : https://www.kernel.org/doc/Documentation/networking/ip-sysctl.txt
+
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
