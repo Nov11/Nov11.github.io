@@ -1,0 +1,181 @@
+12560.581: [G1Ergonomics (Concurrent Cycles) request concurrent cycle initiation, reason: occupancy higher than threshold, occupancy: 6161432576 bytes, allocation request: 0 bytes, threshold: 2576980360 bytes (40.00 %), source: STW humongous allocation]
+ 12560.592: [G1Ergonomics (Concurrent Cycles) request concurrent cycle initiation, reason: occupancy higher than threshold, occupancy: 6161432576 bytes, allocation request: 4194320 bytes, threshold: 2576980360 bytes (40.00 %), source: concurrent humongous allocation]
+ 12560.594: [G1Ergonomics (Concurrent Cycles) request concurrent cycle initiation, reason: requested by GC cause, GC cause: G1 Humongous Allocation]
+{Heap before GC invocations=1509 (full 0):
+ garbage-first heap   total 6291456K, used 6046129K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 25 young (51200K), 4 survivors (8192K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+ 12560.594: [G1Ergonomics (Concurrent Cycles) initiate concurrent cycle, reason: concurrent cycle initiation requested]
+2019-01-03T18:42:08.858+0800: 12560.594: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 12560.595: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 261512, predicted base time: 65.61 ms, remaining time: 134.39 ms, target pause time: 200.00 ms]
+ 12560.595: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 21 regions, survivors: 4 regions, predicted young region time: 2.93 ms]
+ 12560.595: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 21 regions, survivors: 4 regions, old: 0 regions, predicted pause time: 68.55 ms, target pause time: 200.00 ms]
+, 0.0585370 secs]
+   [Parallel Time: 56.4 ms, GC Workers: 5]
+   ....
+   [Eden: 42.0M(3064.0M)->0.0B(3054.0M) Survivors: 8192.0K->18.0M Heap: 5905.9M(6144.0M)->5872.4M(6144.0M)]
+Heap after GC invocations=1510 (full 0):
+ garbage-first heap   total 6291456K, used 6013361K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 9 young (18432K), 9 survivors (18432K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+}
+ [Times: user=0.27 sys=0.00, real=0.06 secs] 
+2019-01-03T18:42:08.916+0800: 12560.653: [GC concurrent-root-region-scan-start]
+2019-01-03T18:42:08.921+0800: 12560.658: [GC concurrent-root-region-scan-end, 0.0041645 secs]
+2019-01-03T18:42:08.921+0800: 12560.658: [GC concurrent-mark-start]
+{Heap before GC invocations=1510 (full 0):
+ garbage-first heap   total 6291456K, used 6254001K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 116 young (237568K), 9 survivors (18432K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+2019-01-03T18:42:09.002+0800: 12560.738: [GC pause (G1 Evacuation Pause) (young) 12560.739: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 53232, predicted base time: 17.76 ms, remaining time: 182.24 ms, target pause time: 200.00 ms]
+ 12560.739: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 107 regions, survivors: 9 regions, predicted young region time: 20.14 ms]
+ 12560.739: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 107 regions, survivors: 9 regions, old: 0 regions, predicted pause time: 37.90 ms, target pause time: 200.00 ms]
+ 12560.740: [G1Ergonomics (Heap Sizing) attempt heap expansion, reason: region allocation request failed, allocation request: 1048568 bytes]
+ 12560.740: [G1Ergonomics (Heap Sizing) expand the heap, requested expansion amount: 1048568 bytes, attempted expansion amount: 2097152 bytes]
+ 12560.740: [G1Ergonomics (Heap Sizing) did not expand the heap, reason: heap already fully expanded]
+ (to-space exhausted), 0.4010546 secs]
+   [Parallel Time: 340.5 ms, GC Workers: 5]
+   ....
+   [Eden: 214.0M(3054.0M)->0.0B(3072.0M) Survivors: 18.0M->0.0B Heap: 6107.4M(6144.0M)->6094.4M(6144.0M)]
+Heap after GC invocations=1511 (full 0):
+ garbage-first heap   total 6291456K, used 6240689K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+}
+ [Times: user=0.65 sys=0.01, real=0.40 secs] 
+{Heap before GC invocations=1511 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 9 young (18432K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+2019-01-03T18:42:09.433+0800: 12561.170: [GC pause (G1 Evacuation Pause) (young) 12561.170: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 97783, predicted base time: 27.41 ms, remaining time: 172.59 ms, target pause time: 200.00 ms]
+ 12561.170: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 9 regions, survivors: 0 regions, predicted young region time: 1.09 ms]
+ 12561.170: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 9 regions, survivors: 0 regions, old: 0 regions, predicted pause time: 28.50 ms, target pause time: 200.00 ms]
+ 12561.171: [G1Ergonomics (Heap Sizing) attempt heap expansion, reason: region allocation request failed, allocation request: 730984 bytes]
+ 12561.171: [G1Ergonomics (Heap Sizing) expand the heap, requested expansion amount: 730984 bytes, attempted expansion amount: 2097152 bytes]
+ 12561.171: [G1Ergonomics (Heap Sizing) did not expand the heap, reason: heap already fully expanded]
+ (to-space exhausted), 0.0602455 secs]
+   [Parallel Time: 50.1 ms, GC Workers: 5]
+   ....
+   [Eden: 18.0M(3072.0M)->0.0B(3072.0M) Survivors: 0.0B->0.0B Heap: 6112.4M(6144.0M)->6112.4M(6144.0M)]
+Heap after GC invocations=1512 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+}
+ [Times: user=0.17 sys=0.00, real=0.06 secs] 
+{Heap before GC invocations=1512 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+2019-01-03T18:42:09.497+0800: 12561.234: [GC pause (G1 Evacuation Pause) (young) 12561.234: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 11008, predicted base time: 8.61 ms, remaining time: 191.39 ms, target pause time: 200.00 ms]
+ 12561.234: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 0 regions, survivors: 0 regions, predicted young region time: 0.00 ms]
+ 12561.234: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 0 regions, survivors: 0 regions, old: 0 regions, predicted pause time: 8.61 ms, target pause time: 200.00 ms]
+, 0.0077707 secs]
+   [Parallel Time: 6.0 ms, GC Workers: 5]
+   ....
+   [Eden: 0.0B(3072.0M)->0.0B(3072.0M) Survivors: 0.0B->0.0B Heap: 6112.4M(6144.0M)->6112.4M(6144.0M)]
+Heap after GC invocations=1513 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+}
+ [Times: user=0.03 sys=0.01, real=0.00 secs] 
+{Heap before GC invocations=1513 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+2019-01-03T18:42:09.508+0800: 12561.245: [GC pause (G1 Evacuation Pause) (young) 12561.245: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 0, predicted base time: 5.90 ms, remaining time: 194.10 ms, target pause time: 200.00 ms]
+ 12561.245: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 0 regions, survivors: 0 regions, predicted young region time: 0.00 ms]
+ 12561.245: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 0 regions, survivors: 0 regions, old: 0 regions, predicted pause time: 5.90 ms, target pause time: 200.00 ms]
+, 0.0042781 secs]
+   [Parallel Time: 2.7 ms, GC Workers: 5]
+   ....
+   [Eden: 0.0B(3072.0M)->0.0B(3072.0M) Survivors: 0.0B->0.0B Heap: 6112.4M(6144.0M)->6112.4M(6144.0M)]
+Heap after GC invocations=1514 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+}
+ [Times: user=0.02 sys=0.00, real=0.01 secs] 
+{Heap before GC invocations=1514 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+2019-01-03T18:42:09.514+0800: 12561.251: [GC pause (G1 Evacuation Pause) (young) 12561.251: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 0, predicted base time: 5.43 ms, remaining time: 194.57 ms, target pause time: 200.00 ms]
+ 12561.251: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 0 regions, survivors: 0 regions, predicted young region time: 0.00 ms]
+ 12561.251: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 0 regions, survivors: 0 regions, old: 0 regions, predicted pause time: 5.43 ms, target pause time: 200.00 ms]
+, 0.0039374 secs]
+   [Parallel Time: 2.6 ms, GC Workers: 5]
+   ....
+   [Eden: 0.0B(3072.0M)->0.0B(3072.0M) Survivors: 0.0B->0.0B Heap: 6112.4M(6144.0M)->6112.4M(6144.0M)]
+Heap after GC invocations=1515 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+}
+ [Times: user=0.01 sys=0.00, real=0.01 secs] 
+{Heap before GC invocations=1515 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+2019-01-03T18:42:09.521+0800: 12561.258: [GC pause (G1 Evacuation Pause) (young) 12561.258: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 0, predicted base time: 4.95 ms, remaining time: 195.05 ms, target pause time: 200.00 ms]
+ 12561.258: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 0 regions, survivors: 0 regions, predicted young region time: 0.00 ms]
+ 12561.258: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 0 regions, survivors: 0 regions, old: 0 regions, predicted pause time: 4.95 ms, target pause time: 200.00 ms]
+, 0.0039620 secs]
+   [Parallel Time: 2.5 ms, GC Workers: 5]
+   ....
+   [Eden: 0.0B(3072.0M)->0.0B(3072.0M) Survivors: 0.0B->0.0B Heap: 6112.4M(6144.0M)->6112.4M(6144.0M)]
+Heap after GC invocations=1516 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+}
+ [Times: user=0.02 sys=0.00, real=0.00 secs] 
+{Heap before GC invocations=1516 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+2019-01-03T18:42:09.527+0800: 12561.264: [GC pause (G1 Evacuation Pause) (young) 12561.264: [G1Ergonomics (CSet Construction) start choosing CSet, _pending_cards: 0, predicted base time: 4.61 ms, remaining time: 195.39 ms, target pause time: 200.00 ms]
+ 12561.264: [G1Ergonomics (CSet Construction) add young regions to CSet, eden: 0 regions, survivors: 0 regions, predicted young region time: 0.00 ms]
+ 12561.264: [G1Ergonomics (CSet Construction) finish choosing CSet, eden: 0 regions, survivors: 0 regions, old: 0 regions, predicted pause time: 4.61 ms, target pause time: 200.00 ms]
+, 0.0036228 secs]
+   [Parallel Time: 2.4 ms, GC Workers: 5]
+   ....
+   [Eden: 0.0B(3072.0M)->0.0B(3072.0M) Survivors: 0.0B->0.0B Heap: 6112.4M(6144.0M)->6112.4M(6144.0M)]
+Heap after GC invocations=1517 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+}
+ [Times: user=0.01 sys=0.00, real=0.01 secs] 
+ 12561.269: [G1Ergonomics (Heap Sizing) attempt heap expansion, reason: allocation request failed, allocation request: 40 bytes]
+ 12561.269: [G1Ergonomics (Heap Sizing) expand the heap, requested expansion amount: 2097152 bytes, attempted expansion amount: 2097152 bytes]
+ 12561.269: [G1Ergonomics (Heap Sizing) did not expand the heap, reason: heap already fully expanded]
+{Heap before GC invocations=1517 (full 0):
+ garbage-first heap   total 6291456K, used 6259121K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128956K, capacity 133808K, committed 142208K, reserved 1175552K
+  class space    used 13840K, capacity 14615K, committed 16512K, reserved 1048576K
+2019-01-03T18:42:09.532+0800: 12561.269: [Full GC (Allocation Failure)  6112M->2401M(6144M), 5.7922819 secs]
+   [Eden: 0.0B(3072.0M)->0.0B(3072.0M) Survivors: 0.0B->0.0B Heap: 6112.4M(6144.0M)->2401.5M(6144.0M)], [Metaspace: 128956K->128939K(1175552K)]
+Heap after GC invocations=1518 (full 1):
+ garbage-first heap   total 6291456K, used 2459102K [0x0000000640000000, 0x0000000640206000, 0x00000007c0000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 128939K, capacity 133778K, committed 142208K, reserved 1175552K
+  class space    used 13837K, capacity 14610K, committed 16512K, reserved 1048576K
+}

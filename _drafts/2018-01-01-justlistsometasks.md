@@ -29,6 +29,9 @@ some task to be finished in this year:
 * lsm tree implementation
 * given a deep understanding of lettuce (especially how it uses Netty)
 * implement kv/basic data structures of redis in any other language
+* finish reading redis source code once for all(maybe not again for a long time)
+* read rocksdb
+* finish cpp version of boltdb
 
 
 get a decent job and no more horrible job interviews.
