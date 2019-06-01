@@ -52,6 +52,9 @@ nothing new accomplished until now. (3/16)
 
 not now either(2019-3-30)
 
+got to admit that these are illustions that I made for myself.
+not something I desired. but for using as execuses 
+
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
