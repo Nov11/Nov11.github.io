@@ -5,7 +5,7 @@ date:   2019-12-12 23:32:00 +0800
 ------
 
 
-one of my colleage is going to left the company in two weeks, what should I feel? 
+One of my colleage is going to left the company in two weeks. He is definitely not the only one. What should I feel? 
 
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
