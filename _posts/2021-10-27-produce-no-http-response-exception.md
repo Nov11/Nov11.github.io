@@ -3,7 +3,7 @@ layout: post
 title:  "one way to produce NoHttpResponseException"
 date:   2021-10-17 20:31:00 +0800
 categories: jekyll update
-------
+---
 
 Having encountered NoHttpResponseException when using Apache Http Client, I did some search on the Internet about this. Although the root cause is not confirmed as lack of logs from online service, it might be helpful for people who want to produce this exception on their own.
 
