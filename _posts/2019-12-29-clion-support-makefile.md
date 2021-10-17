@@ -2,6 +2,7 @@
 layout: post
 title:  "load makefile project in Clion"
 date:   2019-12-29 13:15:00 +0800
+categories: jekyll update
 ------
 
 Great tool:

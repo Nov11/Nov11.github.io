@@ -2,6 +2,7 @@
 layout: post
 title:  "one of my colleages is quiting in several weeks"
 date:   2019-12-12 23:32:00 +0800
+categories: jekyll update
 ------
 
 
