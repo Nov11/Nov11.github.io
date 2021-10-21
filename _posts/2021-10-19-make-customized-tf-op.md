@@ -23,15 +23,6 @@ categories: jekyll update
     * add a new user with `useradd xxx -m` might help if you want clean tmp files generated inside directory.
 
 
-
-Traffic Packets:
-![pic1](https://raw.githubusercontent.com/Nov11/Nov11.github.io/master/pics/produce-nohttpresponseexception/pcap.png)
-Exception log:
-![pic1](https://raw.githubusercontent.com/Nov11/Nov11.github.io/master/pics/produce-nohttpresponseexception/exception.png)
-Line of client code to pause on:
-![pic1](https://raw.githubusercontent.com/Nov11/Nov11.github.io/master/pics/produce-nohttpresponseexception/httpclient.png)
-
-
 [jekyll-docs]: http://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
