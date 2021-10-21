@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "customized tf op"
+title:  "following offical customized tf op tutorial"
 date:   2021-10-19 20:31:00 +0800
 categories: jekyll update
 ---
 
-* follow this guide ![guide](https://github.com/tensorflow/custom-op):
+* follow this guide [offical guide](https://github.com/tensorflow/custom-op):
     * docker pull tensorflow/tensorflow:custom-op-ubuntu16 (download docker image)
     * clone https://github.com/tensorflow/custom-op (clone code repositery)
     * docker run -it -v custom-op:/custom-op tensorflow/tensorflow:custom-op-ubuntu16 (launch docker img with dir mapping)
