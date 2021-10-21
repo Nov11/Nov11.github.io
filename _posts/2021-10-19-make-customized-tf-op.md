@@ -12,9 +12,15 @@ categories: jekyll update
     * ./configure.sh (run this inside /custom-op in the image)
     * bazel build build_pip_pkg (build wheel)
     * bazel-bin/build_pip_pkg artifacts (build wheel)
-    * pip install tensorflow==2.4 (run this before pip install artifacs/xxx.wheel)
+    * pip install tensorflow==2.4 (run this before pip install artifacs/xxx.wheel. the container has tensorflow-cpu 2.4 but no tensorflow installed)
     * pip install artifacts/xxx
-    * python3 -c "import tensorflow as tf;import tensorflow_zero_out;print(tensorflow_zero_out.zero_out([[1,2], [3,4]]))" (run test)
+    * python3 -c "import tensorflow as tf;import tensorflow_zero_out;print(tensorflow_zero_out.zero_out([[1,2], [3,4]]))" (run test. do not executing this inside custom-op directory. using any other directory will be fine)
+
+* tips:
+    * running pip is equivalent to running pip3 inside container
+    * install tensorflow manully inside container. it seems that tensorflow 2.6 does not work with the docker image. use version 2.4 might help.
+    * test script should be execute outside custom-op directory
+
 
 Traffic Packets:
 ![pic1](https://raw.githubusercontent.com/Nov11/Nov11.github.io/master/pics/produce-nohttpresponseexception/pcap.png)
