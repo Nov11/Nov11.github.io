@@ -20,6 +20,8 @@ categories: jekyll update
     * running pip is equivalent to running pip3 inside container
     * install tensorflow manully inside container. it seems that tensorflow 2.6 does not work with the docker image. use version 2.4 might help.
     * test script should be execute outside custom-op directory
+    * add a new user with `useradd xxx -m` might help if you want clean tmp files generated inside directory.
+
 
 
 Traffic Packets:
